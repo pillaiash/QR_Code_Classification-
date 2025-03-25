@@ -27,7 +27,6 @@ The dataset contains 200 QR code images, equally divided into two classes:
 
 ## Deployment
 
-- **Dockerized Application** for easy deployment.
 - **Flask API** for real-time QR code classification.
 - **Edge Deployment** using TensorFlow Lite for offline scanning.
 
@@ -35,14 +34,10 @@ The dataset contains 200 QR code images, equally divided into two classes:
 
 - Hybrid model combining CNN and RF predictions.
 - Transfer learning with pre-trained CNN models.
-- Implement explainability techniques (e.g., SHAP, LIME).
 
-## License
-
-MIT License. You are free to modify and distribute the code with proper attribution.
 
 ## Contact
 
 For questions, contact:  
-Aishwarya  
-Email: your-email@example.com
+Aishwarya Pillai
+Email: aishwaryapillai444@gmail.com
