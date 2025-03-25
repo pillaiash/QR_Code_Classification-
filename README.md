@@ -25,7 +25,7 @@ The dataset contains 200 QR code images, equally divided into two classes:
 - **Random Forest**: Accuracy = 95%
 - **CNN**: Accuracy = 96%
 
-## Deployment
+## Deployment[Future Work]
 
 - **Flask API** for real-time QR code classification.
 - **Edge Deployment** using TensorFlow Lite for offline scanning.
