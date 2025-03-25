@@ -1,57 +1,48 @@
-#QR Code Classification System:
-Overview
-This project implements a machine learning-based system to classify QR code images as either "first print" (original) or "second print" (counterfeit). The system leverages both traditional machine learning models and deep learning approaches to identify subtle differences in print quality and microscopic patterns that distinguish originals from counterfeits.
+# QR Code Classification System: First Print vs Second Print
 
-Dataset Description
-The dataset contains 200 QR code images, divided equally into two classes:
+## Overview
 
-First Print (Original): 100 images of original QR codes with embedded copy detection patterns.
+This project implements a machine learning-based system to classify QR code images as either **"first print" (original)** or **"second print" (counterfeit)**. The system utilizes both traditional machine learning models and deep learning approaches to detect subtle differences in print quality and microscopic patterns that distinguish originals from counterfeits.
 
-Second Print (Counterfeit): 100 images of counterfeit versions created by scanning and reprinting original codes.
+## Dataset Description
 
-Each image exhibits subtle differences due to print quality degradation and reprinting artifacts, which were analyzed and extracted as features for classification.
+The dataset contains 200 QR code images, equally divided into two classes:
+- **First Print (Original)**: 100 images of original QR codes with embedded copy detection patterns.
+- **Second Print (Counterfeit)**: 100 images of counterfeit versions created by scanning and reprinting original codes.
 
-Project Workflow
-1. Data Exploration and Analysis
-Visual inspection was performed to identify key differences between first and second prints.
+## Approach
 
-Statistical summaries and feature distributions were analyzed.
+1. **Data Exploration and Analysis**: Identified key differences between first and second prints.
+2. **Feature Engineering**: Utilized texture-based features (GLCM) to capture print artifacts and degradation.
+3. **Model Development**:
+   - Random Forest (RF) using GLCM-based features.
+   - Convolutional Neural Network (CNN) trained on augmented image data.
+4. **Model Training**: Optimized the models using hyperparameter tuning and cross-validation.
+5. **Model Evaluation**: Assessed models based on accuracy, precision, recall, and F1-score.
 
-Relevant features such as texture, pattern quality, and resolution differences were extracted.
+## Model Performance
 
-2. Feature Engineering
-GLCM (Gray-Level Co-occurrence Matrix): Used to extract texture-based features.
+- **Random Forest**: Accuracy = 95%
+- **CNN**: Accuracy = 96%
 
-Additional features focused on capturing print artifacts, degradation patterns, and local variations in QR code quality.
+## Deployment
 
-3. Model Development
-Random Forest (RF): A traditional machine learning approach leveraging GLCM-based features.
+- **Dockerized Application** for easy deployment.
+- **Flask API** for real-time QR code classification.
+- **Edge Deployment** using TensorFlow Lite for offline scanning.
 
-Convolutional Neural Network (CNN): A deep learning model trained on augmented image data to capture intricate patterns.
+## Future Improvements
 
-4. Model Training and Validation
-RF was optimized using hyperparameter tuning for best performance.
+- Hybrid model combining CNN and RF predictions.
+- Transfer learning with pre-trained CNN models.
+- Implement explainability techniques (e.g., SHAP, LIME).
 
-CNN architecture was fine-tuned with dropout and batch normalization to prevent overfitting.
+## License
 
-Models were validated using a 5-fold cross-validation strategy.
+MIT License. You are free to modify and distribute the code with proper attribution.
 
-5. Model Evaluation
-Models were evaluated using key metrics:
+## Contact
 
-Accuracy
-
-Precision
-
-Recall
-
-F1-Score
-
-Confusion matrices were generated to analyze misclassifications and identify challenging cases.
-
-6. Deployment Considerations
-Models were optimized using quantization and pruning techniques.
-
-The system was containerized using Docker and deployed using Flask APIs.
-
-Edge-based deployment was implemented for offline scanning scenarios.
+For questions, contact:  
+Aishwarya  
+Email: your-email@example.com
